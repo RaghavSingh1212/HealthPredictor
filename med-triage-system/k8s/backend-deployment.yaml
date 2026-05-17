@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: triage-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: triage-backend
+  template:
+    metadata:
+      labels:
+        app: triage-backend
+    spec:
+      containers:
+      - name: backend
+        image: your-registry/triage-backend:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: MONGO_URI
+          value: "mongodb://root:example@mongodb-service:27017/med_db?authSource=admin"
+        - name: GEMINI_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: med-system-secrets
+              key: gemini-api-key
+        - name: ENCRYPTION_KEY
+          valueFrom:
+            secretKeyRef:
+              name: med-system-secrets
+              key: encryption-key
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 8000
+          initialDelaySeconds: 15
+          periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8000
+    targetPort: 8000
+  selector:
+    app: triage-backend
