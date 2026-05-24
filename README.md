@@ -207,25 +207,6 @@ Deploys MongoDB, 2× backend, 2× frontend (LoadBalancer). Set `GEMINI_API_KEY` 
 
 ---
 
-## Security notes
-
-> **Not production-HIPAA-certified.** This is a reference architecture. Before handling real PHI:
-
-- Restrict CORS (currently `*` in dev)
-- Add clinician authentication and audit logging
-- Use TLS everywhere, rotate secrets, and encrypt data at rest
-- Complete a formal HIPAA/security review
-
-Never commit `.env` files or API keys.
-
----
-
-## Author
-
-**Raghav Singh** — [GitHub](https://github.com/RaghavSingh1212) · [Portfolio](https://www.raghavsingh.info) · [LinkedIn](https://www.linkedin.com/in/raghavsingh1212)
-
----
-
 ## License
 
 MIT — use freely for learning and portfolio projects.
