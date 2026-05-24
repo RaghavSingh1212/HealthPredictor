@@ -204,9 +204,3 @@ Deploys MongoDB, 2× backend, 2× frontend (LoadBalancer). Set `GEMINI_API_KEY` 
 | Database | MongoDB 6.0 |
 | Frontend | Next.js 14, React 18, Tailwind CSS, Lucide |
 | Ops | Docker, Kubernetes |
-
----
-
-## License
-
-MIT — use freely for learning and portfolio projects.
