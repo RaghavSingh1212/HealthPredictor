@@ -91,16 +91,6 @@ cp .env.example .env.local
 npm run dev
 ```
 
-### URLs
-
-| Service | URL |
-|---------|-----|
-| Patient chat | http://localhost:3000 |
-| Clinician dashboard | http://localhost:3000/dashboard |
-| API | http://localhost:8000 |
-| API docs (Swagger) | http://localhost:8000/docs |
-| Health check | http://localhost:8000/healthz |
-
 ### Demo flow (mock AI)
 
 With `GEMINI_API_KEY=dev-mock-key` in `backend/.env`:
