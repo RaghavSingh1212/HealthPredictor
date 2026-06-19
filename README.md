@@ -5,6 +5,11 @@ AI-powered medical intake triage system: patients complete a secure symptom conv
 Built with **FastAPI**, **Next.js**, **MongoDB**, **Google Gemini**, and **Kubernetes**.
 
 ---
+
+## 🎨 Screenshots
+
+Here are some screenshots of the app:
+
 <img width="815" height="599" alt="Screenshot 2026-06-19 at 3 40 57 PM" src="https://github.com/user-attachments/assets/0a739896-20c5-4c3b-8629-5c3e453899d3" />
 
 ## Architecture
